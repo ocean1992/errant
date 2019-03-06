@@ -3,7 +3,7 @@ from itertools import combinations, groupby
 from string import punctuation
 import re
 import spacy.parts_of_speech as POS
-import scripts.rdlextra as DL
+import errant.rdlextra as DL
 
 # Some global variables
 NLP = None
