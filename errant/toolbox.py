@@ -1,11 +1,12 @@
 from operator import itemgetter
-
+import os 
+_default_resource_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'resources')
 # Load latest Hunspell dictionaries:
-def loadDictionary(path):
+def loadDictionary(path=os.path.join(_default_resource_dir, 'en_GB-large.txt')):
 	return set(open(path).read().split())
 
 # Load Stanford Universal Tags map file.
-def loadTagMap(path):
+def loadTagMap(path=os.path.join(_default_resource_dir, 'en-ptb_map')):
 	map_dict = {}
 	open_file = open(path).readlines()
 	for line in open_file:
